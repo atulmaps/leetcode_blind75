@@ -2,6 +2,7 @@ package arrays;
 
 import com.sun.org.apache.xpath.internal.operations.Bool;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class ArrayProblems {
@@ -97,6 +98,40 @@ public class ArrayProblems {
             }
         }
         return false;
+    }
+
+    //Product of Array Except Self
+    /*
+    Given an integer array nums, return an array answer such that
+    answer[i] is equal to the product of all the elements of nums except nums[i].
+
+    You must write an algorithm that runs in O(n) time and without using the division operation.
+    * */
+
+    /*
+    Input: nums = [1,2,3,4]
+    Output: [24,12,8,6]
+    * */
+
+    public static int[] productExceptSelf(int[] nums) {
+
+        int[] ans=new int[nums.length];
+
+        int left = 1;
+        int right = 1;
+
+        for(int i=0; i<nums.length;i++) {
+            ans[i] = left;
+            left = left * nums[i];
+        }
+        //[1, 1, 2, 6]
+
+        for(int i=nums.length-1; i >=0; i--) {
+            ans[i] = ans[i] * right;
+            right  = right * nums[i];
+        }
+        //[24, 12, 8, 6]
+        return ans;
     }
 
 }
