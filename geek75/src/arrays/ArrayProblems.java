@@ -1,5 +1,7 @@
 package arrays;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.HashMap;
 
 public class ArrayProblems {
@@ -67,6 +69,34 @@ public class ArrayProblems {
             }
         }
         return maxProfit;
+    }
+
+    // Contains Duplicate
+    /*
+    Given an integer array nums,
+    return true if any value appears at least twice in the array, and
+    return false if every element is distinct.
+    */
+
+    /*
+    Input: nums = [1,2,3,1]
+    Output: true
+    * */
+
+    public static boolean containsDuplicate(int[] nums) {
+
+        HashMap<Integer, Boolean> countMap = new HashMap();
+
+        for(int i=0; i < nums.length; i++) {
+            // check if we visited
+            if(countMap.containsKey(nums[i])) {
+                return true;
+            }
+            else {
+                countMap.put(nums[i], true);
+            }
+        }
+        return false;
     }
 
 }
