@@ -1,4 +1,5 @@
 import arrays.ArrayProblems;
+import tree.TreeProblems;
 
 public class Application {
 
@@ -16,18 +17,22 @@ public class Application {
 //        int maxProfit = ArrayProblems.maxProfit(prices);
 //        System.out.println("Maximum profit : " + maxProfit);
 
-//          // Contains duplicate
-//          int[] nums = {1,2,3,1};
-//          boolean containsDuplicate = ArrayProblems.containsDuplicate(nums);
-//          System.out.println("Contains Duplicate: " + containsDuplicate);
+//        // Contains duplicate
+//        int[] nums = {1,2,3,1};
+//        boolean containsDuplicate = ArrayProblems.containsDuplicate(nums);
+//        System.out.println("Contains Duplicate: " + containsDuplicate);
 
-        //Product of Array Except Self
-        int nums[] = {1, 2, 3, 4};
-        int products[] = ArrayProblems.productExceptSelf(nums);
-        System.out.print("[ ");
-        for (int p: products) {
-            System.out.print(p + ",");
-        }
-        System.out.print("]");
+//        //Product of Array Except Self
+//        int nums[] = {1, 2, 3, 4};
+//        int products[] = ArrayProblems.productExceptSelf(nums);
+//        System.out.print("[ ");
+//        for (int p: products) {
+//            System.out.print(p + ",");
+//        }
+//        System.out.print("]");
+
+          //Maximum Depth of Binary Tree
+         //TreeProblems.maxDepth()
+
     }
 }
